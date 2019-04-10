@@ -1,0 +1,22 @@
+﻿@using CRUDelicious.Models;
+@model List<Dish>;
+
+<h1 Class="text-center"> Welcome to CRUDelicious</h1>
+<p Class="text-center">Checkout some recent dishes  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+    <a href="/new">Add a dish</a>          
+</p> 
+<hr>
+<table>
+
+
+@foreach(var thisdish in Model)
+{
+    <tr> 
+        <h2>  <a href= @thisdish.DishId> @thisdish.DishName</a> by @thisdish.ChefName</h2>   
+    </tr>
+    
+}
+</table>
